@@ -17,8 +17,8 @@ class EpsXmlElement
     }
 
     /**
-     * 
-     * @param type $rootNode
+     *
+     * @param string $rootNode
      * @return EpsXmlElement element
      */
     public static function CreateEmptySimpleXml($rootNode)

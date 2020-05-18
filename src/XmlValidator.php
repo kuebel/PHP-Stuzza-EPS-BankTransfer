@@ -11,7 +11,7 @@ class XmlValidator
 
     public static function ValidateEpsProtocol($xml)
     {
-        return self::ValidateXml($xml, self::GetXSD('EPSProtocol-V25.xsd'));
+        return self::ValidateXml($xml, self::GetXSD('EPSProtocol-V26.xsd'));
     }
 
     // HELPER FUNCTIONS
@@ -34,7 +34,7 @@ class XmlValidator
         {
             $xmlError = libxml_get_last_error();
             libxml_use_internal_errors($prevState);
-            
+
             throw new XmlValidationException('XML does not validate against XSD. ' . $xmlError->message);
         }
         return true;
